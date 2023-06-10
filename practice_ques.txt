@@ -12,3 +12,30 @@ else {
 }
 
 console.log(out);
+
+
+// 2. Square the value of every element in the array. Presume that you will only get numbers in the input array.
+
+const input = [1, 2, 3, 4, 5]; 
+
+const out=input.map((ele)=> (ele*ele));
+console.log(out);
+
+3. Calculate the mean and median values of the number elements from the input array.
+
+const input = [12, 46, 32, 64];
+
+let out=input.reduce((total,ele)=> {return total+ele},0);
+console.log("Mean is: "+ out/input.length);
+var res=-1;
+
+let out1=input.sort();
+if(input.length%2==0)
+res=(out1[Math.floor((0+input.length)/2)] + out1[Math.floor(((0+input.length)/2))-1])/2;
+else
+res=out1[Math.floor((0+input.length)/2)];
+
+console.log("Median is: "+ res);
+
+
+
